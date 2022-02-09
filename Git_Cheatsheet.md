@@ -54,7 +54,7 @@ CREATING A NEW PROJECT FILE
 
 11) At this point you created a new file that needs to be added to the project and made available so that everyone else on the project can see it. To do this we must first let Git know that this is a file that we want to keep track of and we do this with the following command from within the VS Code terminal window like we have been doing all the other commands so far:
 
-> git add <filename>.<ext>
+> git add [filename].[ext]
 
 12) The "git add" command only tells Git that we want to track this file, there is another Git command that we use to let Git know that we have done enough work to "capture" the current state of a given file and this is done with the "git commit" command, so commit this file into the Git database with the following command:
 
