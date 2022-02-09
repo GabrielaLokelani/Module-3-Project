@@ -58,7 +58,7 @@ CREATING A NEW PROJECT FILE
 
 12) The "git add" command only tells Git that we want to track this file, there is another Git command that we use to let Git know that we have done enough work to "capture" the current state of a given file and this is done with the "git commit" command, so commit this file into the Git database with the following command:
 
-> git commit -m "Initial commit of the about.html" about.html
+> git commit -m "Initial commit of the [filename].[ext]" [filename].[ext]
 
 The "-m" option to the "git commit" command add a message to be associated with the commit and should be descriptive enough as to let others know what changed and/or why the commit was made. Just after the "message" the name of the file or files that are being committed are to be listed.
 
