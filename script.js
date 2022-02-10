@@ -27,3 +27,12 @@ function game_stop(){
 function game_pause(){
     // Place code here to handle how the game handles needing to be paused.
 }
+
+function enable_sound(){
+    // You know the deal
+}
+
+function disable_sound(){
+    // Yeah...yeah...
+}
+
