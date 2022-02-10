@@ -9,6 +9,8 @@ If this command fails, you do not have Git installed properly and you will need 
 PREPARE TO CLONE THE PROJECT
 ============================
 
+**ATTENTION:** There will be some references to specific file names and directories in this next section, while it would be nice to generalize them, the assumption will be made that the reader can make the appropriate and logical change to the Git command arguments and they are left as specific names.
+
 2) While I do not know your comfort level with navigating folders/directories on your computer, but you will want to navigate to a folder/directory that you can easily get to and find and within that directory called "Mod_3_Proj", I am giving you this as a directory name to differentiate it from the "Module-3-Project" that will get created when you clone the code for this project, which is currently located on GitHub.
 
 3) Now from within VS Code, you need to launch a "New Window", i.e. from the VS Code menu select "File-> New Window" and then select from the "Start" options that are presented, the "Open Folder"... *** DO NOT SELECT "Open File" *** and then navigate the folder/directory structure of you computer until you get to to the "Mode_3_Proj" folder/directory and then click the "Select Folder" button. Follow the messages until you are back to a new VS Code Window....just close out the "Getting Started" file like we have done before many times before.
