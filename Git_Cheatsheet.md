@@ -37,7 +37,9 @@ After this command is done with its tasks, you will now have a new directory in 
 
 8) *** CRITICAL STEP ALERT *** Always create a new branch before doing ANY KIND OF WORK. To create a new branch use the following command and do take note of the new name of the branch:
 
-> git checkout ISSUE_##_Collaborators_First_Name
+> git checkout -b ISSUE_##_Collaborators_First_Name
+
+NOTE: While there is another option to create the benach "git branch [BRANCH_NAME]" this command only creates the branch whereas the "git checkout -b [BRANCH_NAME]" command in addition to creating the branch, it also switches the active branch to the new branch. It is also worth noting that once branch(es) are created that the "git checkout [BRANCH_NAME]", i.e. without the "-b" option, is used to switch between branches.
 
 By naming the new branch in this manner we, the team, will know that someone is working on a given issue and we should not do the same work as well as letting us know who is actually doing the work in case we had any questions or concerns. Yes, we could look to see who created the branch, but this quick visual of just look at the name of the branch will make life easier for everyone.
 
@@ -50,30 +52,34 @@ If things are going well, the "ISSUE_##_Collaborators_First_Name" branch should 
 CREATING A NEW PROJECT FILE
 ====================
 
-10) With the proper branch active, now create a new file called "about.html" using the standard HTML 5 template that we have been using in the class to this point and set the tab "title" to "About Pop Pal" and save the changes. Do this at a minimum, feel free to add other information such as an actual header in the body section if you want, but do make sure that you can launch the "about.html" with Live Server and that it views properly as you would expect it to.
+10) With the proper branch active, now create a new file called "[filename.ext]" using the standard HTML 5 template that we have been using in the class to this point and set the tab "title" to "About Pop Pal" and save the changes. Do this at a minimum, feel free to add other information such as an actual header in the body section if you want, but do make sure that you can launch the "about.html" with Live Server and that it views properly as you would expect it to.
 
 11) At this point you created a new file that needs to be added to the project and made available so that everyone else on the project can see it. To do this we must first let Git know that this is a file that we want to keep track of and we do this with the following command from within the VS Code terminal window like we have been doing all the other commands so far:
 
 > git add [filename].[ext]
 
+NOTE: The "git add" command is only done once for each new file and will be skipped with future updates to the "[filename.ext]" file. Additionally, a single "git add" command can "add" several files at once, just list out all the new files after "add".
+
 12) The "git add" command only tells Git that we want to track this file, there is another Git command that we use to let Git know that we have done enough work to "capture" the current state of a given file and this is done with the "git commit" command, so commit this file into the Git database with the following command:
 
 > git commit -m "Initial commit of the [filename].[ext]" [filename].[ext]
 
-The "-m" option to the "git commit" command add a message to be associated with the commit and should be descriptive enough as to let others know what changed and/or why the commit was made. Just after the "message" the name of the file or files that are being committed are to be listed.
+NOTE: Unlike "git add", "git commit" is done **EVERYTIME** a [filename.ext] file is changed **AND** the changes are ready to be saved/captured into the Git database and to be done with greaty frequency, i.e. once you get a feature/issue working make a "git commit". Additionally, a single "git commit" command can "commit" several files at once, just list out all the new files after "commit".
 
-13) While the "git command" add the file to the Git database located on your local machine, we need one more step to make it visible and accessible by others by getting the code into the repository located on GitHub and this is done with the following Git command:
+The "-m" option to the "git commit" command adds a message to be associated with the "commit" and should be descriptive enough as to let others know what changed and/or why the commit was made. Just after the "message" the name of the file, or files, that are being committed are to be listed.
+
+13) While the "git commit" adds the file(s) to the Git database located on your local machine, we need one more step to make it visible and accessible by others by getting the code into the repository located on GitHub and this is done with the following Git command:
 
 > git push -u origin ISSUE_##_Collaborators_First_Name
 
-This is where the real beauty of doing things via branching comes into play, while this particular instance only involves a single file and a single commit, as part of the learning process, as things get busier and multiple tasks get done, a single push could include several commits and several files, i.e. we do NOT need to type all those file names over again, just the name of the branch!!! :-) 
+NOTE: This is where the real beauty of doing things via branching comes into play, while this particular instance only involves a single file and a single commit... as part of the learning process...as things get busier and multiple tasks get done, a single push could include several commits and several files, i.e. we do NOT need to type all those file names over again, just the name of the branch!!! :-) 
 
 NOW ONTO GITHUB
 =============
 
 While the next steps can be done in the command line, to keep things simple we will use the GitHub interface as it is easier and provides for a better visual view of what is happening.
 
-14) Without going through the whole process again, I may not be able to provide more detailed instructions, but at this point you will need to create a new pull request based on this new branch "ISSUE_4_Jelkin", so go to the Pull-Request tab on GitHub and click the green button that is titled "Create Pull-Request" or just "Create P-R"...something like that. Then set all the associations on the right hand side of the screen such as: project, milestone, issue, reviewers, etc....the selection process is kind of not so intuitive in that you make the selection(s) and then click somewhere on the page...an area that has nothing on it...and then it will process the selection that you made...WEIRD!?!?!?!
+14) Without going through the whole process again, I may not be able to provide more detailed instructions, but at this point you will need to create a new pull request based on this new branch "ISSUE_##_Collaborator", so go to the Pull-Request tab on GitHub and click the green button that is titled "Create Pull-Request" or just "Create P-R"...something like that. Then set all the associations on the right hand side of the screen such as: project, milestone, issue, reviewers, etc....the selection process is kind of not so intuitive in that you make the selection(s) and then click somewhere on the page...an area that has nothing on it...and then it will process the selection that you made...WEIRD!?!?!?!
 
 15) Then after people review it, you can then do the actual merge to the "main" branch.
 
