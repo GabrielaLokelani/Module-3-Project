@@ -1,0 +1,12 @@
+.grid-container {
+   display: grid;
+   grid-template-columns: auto auto auto auto;
+   grid-gap: 10px 15px;
+   margin: 0px 30px 0px 30px;
+}
+
+.person {
+   background-color: blanchedalmond;
+   padding: 10px;
+   border: dotted rosybrown
+}
