@@ -1,5 +1,8 @@
 let first_click = false;
+let first_click_tstamp = 0;
 let last_click = false;
+let last_click_tstamp = 0;
+
 let num2pop = 0;
 let curr_pop_cnt = 0;
 
@@ -37,12 +40,18 @@ function setGrid(numColums, numRows, pat, pat_colors) {
     myDIV.addEventListener("click", (e) => {
         if (e.target.className == "button") {
             e.target.className = "button_active";
-            first_click = first_click ? first_click : true;
+            if(!first_click){
+                first_click_tstamp = e.timeStamp;
+                first_click = true;
+            }
             curr_pop_cnt++
             console.log("Pop #"+curr_pop_cnt + " of "+num2pop);
             last_click = curr_pop_cnt == num2pop ? true : false;
             if(last_click){
+                last_click_tstamp = e.timeStamp;
+                let time2complete_in_secs = (last_click_tstamp - first_click_tstamp) / 1000;
                 console.log("CONGRATULATIONS!!! You POPPED all the spots for this pattern!")
+                console.log("\n*** TIME TO COMPLETE: "+time2complete_in_secs+" seconds ***")
             }
         }
     });
