@@ -1,7 +1,9 @@
-// This is where the various JS function calls and event handlers will be located
 
+import {setGrid} from "./pop_pal_play.js"
+
+main()
 function main() {
-    // Place the initial start-up code here
+    game_play()
 }
 
 function about(){
@@ -13,7 +15,7 @@ function game_options() {
 }
 
 function game_play() {
-    // place code here to handle the actual game play screen and functionality
+    setGrid(5, 4);
 }
 
 function game_start() {
