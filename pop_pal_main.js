@@ -1,9 +1,30 @@
 
 import {setGrid} from "./pop_pal_play.js"
+import {pop_pal_pattern_small_heart, pop_pal_colors_small_heart} from "./pop_pal_patterns_shapes.js"
+import {pop_pal_pattern_base_heart, pop_pal_colors_base_heart} from "./pop_pal_patterns_shapes.js"
+import {pop_pal_pattern_large_heart, pop_pal_colors_large_heart} from "./pop_pal_patterns_shapes.js"
+import {pop_pal_pattern_small_diamond, pop_pal_colors_small_diamond} from "./pop_pal_patterns_shapes.js"
+import {pop_pal_pattern_base_diamond, pop_pal_colors_base_diamond} from "./pop_pal_patterns_shapes.js"
+import {pop_pal_pattern_large_diamond, pop_pal_colors_large_diamond} from "./pop_pal_patterns_shapes.js"
+
+// let pattern = pop_pal_pattern_small_heart;
+// let pattern_colors = pop_pal_colors_small_heart;
+// let pattern = pop_pal_pattern_base_heart;
+// let pattern_colors = pop_pal_colors_base_heart;
+// let pattern = pop_pal_pattern_large_heart;
+// let pattern_colors = pop_pal_colors_large_heart;
+let pattern = pop_pal_pattern_small_diamond;
+let pattern_colors = pop_pal_colors_small_diamond;
+// let pattern = pop_pal_pattern_base_diamond;
+// let pattern_colors = pop_pal_colors_base_diamond;
+// let pattern = pop_pal_pattern_large_diamond;
+// let pattern_colors = pop_pal_colors_large_diamond;
 
 main()
+
 function main() {
-    game_play()
+    game_options()
+    game_play(pattern, pattern_colors);
 }
 
 function about(){
@@ -11,11 +32,32 @@ function about(){
 }
 
 function game_options() {
-    // Place code here to handle the game options
+    const optionsHTML = `
+    <br>
+    <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown button
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><a class="dropdown-item" href="#">Action</a></li>
+      <li><a class="dropdown-item" href="#">Another action</a></li>
+      <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+    </div>
+    `
+    
+    let optionsDIV = document.createElement("div");
+    optionsDIV.innerHTML = optionsHTML;
+    
+    const rootDIV = document.getElementById("root");
+    
+    rootDIV.appendChild(optionsDIV);
 }
 
-function game_play() {
-    setGrid(10, 10);
+function game_play(pat, pat_colors) {
+    let num_rows = pat.length;
+    let num_cols = pat[0][0].length;
+    setGrid(num_rows, num_cols, pat, pat_colors);
 }
 
 function game_start() {
@@ -38,4 +80,3 @@ function enable_sound(){
 function disable_sound(){
     // Yeah...yeah...
 }
-
