@@ -17,7 +17,6 @@
 .pop-it {
     padding: 15px;
     /* padding-left: 50px; */ 
-    border-radius: 2em;
     border: solid black 0.5px;
     height: 400px;
     width: 400px;
@@ -29,16 +28,20 @@
 
 .buttonactive {
     background-color: #FFBCD9;
-    box-shadow: inset 0px 0px 10px #000000;
+    box-shadow: inset 0px 0px 5px #000000;
     transform: translateY(1.5px);
+    width: 100%;
+    border-radius: 60%;
+    height: 100%;
+    outline: none;
 }
 
 .button {
     background-color: #FFBCD9;
     border: solid black 0.5px;
-    width: 65%;
-    border-radius: 200px;
-    height: 85%;
+    width: 100%;
+    border-radius: 60%;
+    height: 100%;
     outline: none;
 
 }

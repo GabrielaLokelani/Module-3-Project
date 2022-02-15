@@ -15,7 +15,7 @@ function game_options() {
 }
 
 function game_play() {
-    setGrid(5, 4);
+    setGrid(10, 10);
 }
 
 function game_start() {
