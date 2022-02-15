@@ -1,1 +1,50 @@
 /* put a smackin css page in this page*/ 
+
+
+  body {
+    margin: 85px;
+
+    /* background-color: #eec0c6;
+    background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%); */
+
+    /* background-color: #f876de;
+    background-image: linear-gradient(315deg, #f876de 0%, #b9d1eb 74%); */
+
+    background-color: #2a2a72;
+    background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
+}
+
+.pop-it {
+    padding: 15px;
+    /* padding-left: 50px; */ 
+    border-radius: 2em;
+    border: solid black 0.5px;
+    height: 400px;
+    width: 400px;
+    margin: auto;
+    background-color: orchid;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 20px 30px, rgba(0, 0, 0, 0.30) 20px 20px 30px;
+    
+}
+
+.buttonactive {
+    background-color: #FFBCD9;
+    box-shadow: inset 0px 0px 10px #000000;
+    transform: translateY(1.5px);
+}
+
+.button {
+    background-color: #FFBCD9;
+    border: solid black 0.5px;
+    width: 65%;
+    border-radius: 200px;
+    height: 85%;
+    outline: none;
+
+}
+
+th, td {
+    text-align: center;
+    border: solid black 0.75px;
+}
+
