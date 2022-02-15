@@ -1,4 +1,8 @@
-let pp_patterns = [
+let pp_pattern_sel_name = "diamond";
+let pp_pattern_sel_size = "base";
+let pp_pattern_sel_cat = "shapes";
+
+let pp_patterns_catalog = [
     { name : "diamond",
       size : "small",
       category: "shapes",

@@ -15,39 +15,47 @@
 }
 
 .pop-it {
-    padding: 15px;
+    padding: 50px;
     /* padding-left: 50px; */ 
     border: solid black 0.5px;
-    height: 300px;
-    width: 300px;
+    /* height: 300px; */
+    /* width: 00px; */
     margin: auto;
     background-color: orchid;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 20px 30px, rgba(0, 0, 0, 0.30) 20px 20px 30px;
-    
 }
 
-.buttonactive {
+.button_active {
     background-color: #FFBCD9;
-    box-shadow: inset 0px 0px 5px #000000;
-    transform: translateY(1.5px);
+    box-shadow: inset 0px 0px 8px #000000;
+    /* transform: translateY(1.5px); */
+    width: 30px;
+    border-radius: 50%;
+    height: 30px;
+    outline: none;
+}
+
+.button_disabled {
+    background-color: #FFBCD9;
+    box-shadow: inset 0px 0px 8px #000000;
+    /* transform: translateY(1.5px); */
     width: 100%;
-    border-radius: 60%;
+    border-radius: 50%;
     height: 100%;
     outline: none;
+    display: none;
 }
 
 .button {
     background-color: #FFBCD9;
     border: solid black 0.5px;
-    width: 100%;
-    border-radius: 60%;
-    height: 100%;
+    width: 30px;
+    border-radius: 50%;
+    height: 30px;
     outline: none;
-
 }
 
 th, td {
     text-align: center;
     border: solid black 0.5px;
 }
-
