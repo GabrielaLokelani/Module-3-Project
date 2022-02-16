@@ -6,6 +6,12 @@ import {pop_pal_pattern_large_heart, pop_pal_colors_large_heart} from "./pop_pal
 import {pop_pal_pattern_small_diamond, pop_pal_colors_small_diamond} from "./pop_pal_patterns_shapes.js"
 import {pop_pal_pattern_base_diamond, pop_pal_colors_base_diamond} from "./pop_pal_patterns_shapes.js"
 import {pop_pal_pattern_large_diamond, pop_pal_colors_large_diamond} from "./pop_pal_patterns_shapes.js"
+import {pop_pal_pattern_small_square, pop_pal_colors_small_square} from "./pop_pal_patterns_shapes.js"
+import {pop_pal_pattern_base_square, pop_pal_colors_base_square} from "./pop_pal_patterns_shapes.js"
+import {pop_pal_pattern_large_square, pop_pal_colors_large_square} from "./pop_pal_patterns_shapes.js"
+import {pop_pal_pattern_small_circle, pop_pal_colors_small_circle} from "./pop_pal_patterns_shapes.js"
+import {pop_pal_pattern_base_circle, pop_pal_colors_base_circle} from "./pop_pal_patterns_shapes.js"
+import {pop_pal_pattern_large_circle, pop_pal_colors_large_circle} from "./pop_pal_patterns_shapes.js"
 
 // let pattern = pop_pal_pattern_small_heart;
 // let pattern_colors = pop_pal_colors_small_heart;
@@ -13,12 +19,18 @@ import {pop_pal_pattern_large_diamond, pop_pal_colors_large_diamond} from "./pop
 // let pattern_colors = pop_pal_colors_base_heart;
 // let pattern = pop_pal_pattern_large_heart;
 // let pattern_colors = pop_pal_colors_large_heart;
-let pattern = pop_pal_pattern_small_diamond;
-let pattern_colors = pop_pal_colors_small_diamond;
-// let pattern = pop_pal_pattern_base_diamond;
-// let pattern_colors = pop_pal_colors_base_diamond;
-// let pattern = pop_pal_pattern_large_diamond;
-// let pattern_colors = pop_pal_colors_large_diamond;
+let pattern = pop_pal_pattern_small_circle;
+let pattern_colors = pop_pal_colors_small_circle;
+// let pattern = pop_pal_pattern_base_circle;
+// let pattern_colors = pop_pal_colors_base_circle;
+// let pattern = pop_pal_pattern_large_circle;
+// let pattern_colors = pop_pal_colors_large_circle;
+// let pattern = pop_pal_pattern_small_square;
+// let pattern_colors = pop_pal_colors_small_square;
+// let pattern = pop_pal_pattern_base_square;
+// let pattern_colors = pop_pal_colors_base_square;
+// let pattern = pop_pal_pattern_large_square;
+// let pattern_colors = pop_pal_colors_large_square;
 
 main()
 
