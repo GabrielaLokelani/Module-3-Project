@@ -16,6 +16,7 @@ function setGrid(numColums, numRows, pat, pat_colors) {
     gridHTML += '<table class = "pop-it" >'
 
     curr_pop_cnt = 0;
+    num2pop = 0;
 
     for (let col = 0; col < numColums; col++) {
         gridHTML += '<tr>';
@@ -25,7 +26,6 @@ function setGrid(numColums, numRows, pat, pat_colors) {
                 gridHTML += '<td> <input id = "button" class = "button_disabled" type = "button" /> </td>';
             } else {
                 let pop_color = pat_colors[pat_char];
-                // console.log(`the pop_color is: {$pop}`);
                 gridHTML += `<td> <input id = "button" class = "button" type = "button" style="background-color:${pop_color};" /> </td>`;
                 num2pop++;
             }
@@ -42,6 +42,7 @@ function setGrid(numColums, numRows, pat, pat_colors) {
 
     myDIV.addEventListener("click", (e) => {
         if (e.target.className == "button") {
+            // insert sound effect here but before line 60 
             e.target.className = "button_active";
             if(!first_click){
                 first_click_tstamp = e.timeStamp;
