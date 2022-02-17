@@ -20,10 +20,13 @@ function setGrid(numColums, numRows, pat, pat_colors) {
     for (let col = 0; col < numColums; col++) {
         gridHTML += '<tr>';
         for (let row = 0; row < numRows; row++) {
-            if(pat[col][0][row] == "-"){
+            let pat_char = pat[col][0][row];
+            if (pat_char == "-") {
                 gridHTML += '<td> <input id = "button" class = "button_disabled" type = "button" /> </td>';
             } else {
-                gridHTML += '<td> <input id = "button" class = "button" type = "button" /> </td>';
+                let pop_color = pat_colors[pat_char];
+                // console.log(`the pop_color is: {$pop}`);
+                gridHTML += `<td> <input id = "button" class = "button" type = "button" style="background-color:${pop_color};" /> </td>`;
                 num2pop++;
             }
         }
