@@ -8,6 +8,7 @@ let pp_pattern_sel_cat = "shapes";
 //     -- description
 //     -- preview image
 let pp_patterns_catalog = {
+    other: {},
   
     shapes: {
       diamond: [
