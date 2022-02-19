@@ -1,5 +1,6 @@
 
 import {setGrid} from "./pop_pal_play.js"
+import {set_up_options} from "./pop_pal_options.js"
 import {pop_pal_pattern_small_heart, pop_pal_colors_small_heart} from "./pop_pal_patterns_shapes.js"
 import {pop_pal_pattern_base_heart, pop_pal_colors_base_heart} from "./pop_pal_patterns_shapes.js"
 import {pop_pal_pattern_large_heart, pop_pal_colors_large_heart} from "./pop_pal_patterns_shapes.js"
@@ -12,6 +13,7 @@ import {pop_pal_pattern_large_square, pop_pal_colors_large_square} from "./pop_p
 import {pop_pal_pattern_small_circle, pop_pal_colors_small_circle} from "./pop_pal_patterns_shapes.js"
 import {pop_pal_pattern_base_circle, pop_pal_colors_base_circle} from "./pop_pal_patterns_shapes.js"
 import {pop_pal_pattern_large_circle, pop_pal_colors_large_circle} from "./pop_pal_patterns_shapes.js"
+
 
 // let pattern = pop_pal_pattern_small_heart;
 // let pattern_colors = pop_pal_colors_small_heart;
@@ -44,26 +46,7 @@ function about(){
 }
 
 function game_options() {
-    const optionsHTML = `
-    <br>
-    <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-      Dropdown button
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-      <li><a class="dropdown-item" href="#">Action</a></li>
-      <li><a class="dropdown-item" href="#">Another action</a></li>
-      <li><a class="dropdown-item" href="#">Something else here</a></li>
-    </ul>
-    </div>
-    `
-    
-    let optionsDIV = document.createElement("div");
-    optionsDIV.innerHTML = optionsHTML;
-    
-    const rootDIV = document.getElementById("root");
-    
-    rootDIV.appendChild(optionsDIV);
+   set_up_options()
 }
 
 function game_play(pat, pat_colors) {
