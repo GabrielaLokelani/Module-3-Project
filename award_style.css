@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Permanent+Marker&family=Press+Start+2P&display=swap');
+
+.wholeBody {
+    width: 100px;
+    height: 100px;
+    background-color: turquoise;
+    -webkit-animation: glow linear 3s infinite; 
+    animation: glow linear 3s infinite;
+} 
+@-webkit-keyframes glow { 
+    0% { background-color: cornflowerblue; }
+    50% { background-color: cyan; }
+    100% { background-color:blue; } 
+
+} 
+@keyframes glow { 
+    20% { background-color: green; }
+    35% { background-color: cyan; }
+    55% { background-color: cornflowerblue;}
+    100% { background-color: blue;}
+  }
+
+
+.header {margin-left: 35%; margin-top: 0%; margin-right: 35%; color:  black; font-family: "Start Press 2P", cursive;
+    text-shadow: 2px 2px red;
+    font-size: 400%;
+    
+  
+}.header:hover{
+background-color: black;
+color: white;}
+
+.greenlayer {
+    width: 1000px;
+    height: 1000px;
+    margin-left: 150%;
+    -webkit-animation: glow linear 1s infinite; 
+    animation: glow linear 1s infinite;
+    animation-duration: 3s;
+} 
+@-webkit-keyframes glow { 
+    0% { background-color:green; }
+    50% { background-color:mediumseagreen; }
+    100% { background-color:palegreen; } 
+
+} 
+@keyframes glow { 
+    20% { background-color: seagreen; }
+    35% { background-color: chartreuse; }
+    55% { background-color: olivedrab;}
+    100% { background-color: limegreen ;}
+  
+}.score{ color:  black; font-family: "Fredoka One", serif;
+    text-shadow: 2px 2px red;
+    font-size: 400%;
+
+}.criteria { color:  black; font-family: "Fredoka One", serif;
+    text-shadow: 2px 2px red;
+    font-size: 400%;
+    position:sticky;
+}table,
+th,
+td {
+ 
+  width: 50%;
+  height: 50%;
+  margin-left: 25%;
+  padding-top: 2%;
+  padding-bottom: -20%;
+  margin-bottom: -50%;
+ 
+  }
+
+tr:hover {
+  background-color: black;
+  color: white;
+}
+
+.white {
+  background-color: lawngreen;
+ 
+  font-weight: 700;
+  font-style: italic;
+  font-size: x-large;
+}.white2 {
+    background-color: whitesmoke;
+    font-size: large;
+  }.white3 {
+    background-color: whitesmoke;
+    font-size: large;
+  }.white4 {
+    background-color: whitesmoke;
+    font-size: large;
+  }.goldlayer{
+    background-color: goldenrod; 
+    margin-top: 0%; margin-bottom: 15%; 
+    padding-top: 10%; padding-bottom: 12%;
+    -webkit-animation: glow linear 1s infinite; 
+    animation: glow linear 1s infinite;
+    animation-duration: 4s;
+    animation-delay: 3s;
+} 
+@-webkit-keyframes glow { 
+    0% { background-color:red; }
+    50% { background-color:orange; }
+    100% { background-color:red; } 
+
+} 
+@keyframes glow { 
+    20% { background-color: goldenrod; }
+    35% { background-color: orangered; }
+    55% { background-color: grey;}
+    100% { background-color: peru;}
+  }
+
+  
+
+

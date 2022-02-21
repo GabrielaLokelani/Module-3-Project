@@ -28,21 +28,21 @@ let pp_patterns_catalog = {
         }
       ],
       hearts: [
-      {         
-        size : "small",
-        description : "The shape you will find in a deck of playing cards, a 10x10 pattern.", 
-        preview_img : ""
-      },
-      {
-        size : "base",
-        description : "The shape you will find in a deck of playing cards, a 20x20 pattern.",
-        preview_img : ""
-      },
-      {
-        size : "large",
-        description : "The shape you will find in a deck of playing cards, a 30x30 pattern.",
-        preview_img : ""
-      }
+        {         
+          size : "small",
+          description : "The shape you will find in a deck of playing cards, a 10x10 pattern.", 
+          preview_img : ""
+        },
+        {
+          size : "base",
+          description : "The shape you will find in a deck of playing cards, a 20x20 pattern.",
+          preview_img : ""
+        },
+        {
+          size : "large",
+          description : "The shape you will find in a deck of playing cards, a 30x30 pattern.",
+          preview_img : ""
+        }
       ],
 
       circle : [
@@ -82,28 +82,5 @@ let pp_patterns_catalog = {
     }
   
 }
-     
   
-  
-   
-  
-//     name : "square" {
-//       {         
-//         size : "small";
-//         description : "The shape you will find in a deck of playing cards, a 10x10 pattern." 
-//       }
-//       {
-//         size : "base";
-//         description : "The shape you will find in a deck of playing cards, a 20x20 pattern."
-//       }
-//       {
-//         size : "large";
-//         description : "The shape you will find in a deck of playing cards, a 30x30 pattern."
-//       }
-//     }
-//   }
-// }
-
-// }
- 
-
+export {pp_patterns_catalog, pp_pattern_sel_name, pp_pattern_sel_size, pp_pattern_sel_cat};

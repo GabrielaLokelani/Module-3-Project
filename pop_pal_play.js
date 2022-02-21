@@ -26,7 +26,6 @@ function setGrid(numColums, numRows, pat, pat_colors) {
                 gridHTML += '<td> <input id = "button" class = "button_disabled" type = "button" /> </td>';
             } else {
                 let pop_color = pat_colors[pat_char];
-
                 gridHTML += `<td> <input id = "button" class = "button" type = "button" style="background-color:${pop_color};" /> </td>`;
                 num2pop++;
             }
