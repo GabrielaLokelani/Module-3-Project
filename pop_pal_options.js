@@ -6,7 +6,7 @@ function set_up_options() {
   console.log("# of categories " + Object.keys(pp_patterns_catalog).length);
  
   const optionsHTML = `
-  <div> 
+  <div type="container-fluid" style="text-size: 1em"> 
       <p>Select Your Category</p>
         <select id="select_your_category" name="select_your_category"></select>
       <p>Select Your Pattern</p>
@@ -44,46 +44,30 @@ function set_up_options() {
     tempOpt.value = patOpt;
     tempOpt.text = patOpt;
     patSEL.appendChild(tempOpt);
-    console.log(patSEL[0]);
+  }
+  // now take care of selecting size option
+  let patSubOptions = patOptions[patSEL.value];
+  let sizeArr = [];
+  for ( let psOpt of patSubOptions) {
+    console.log(psOpt.size);
+    if (psOpt.size != null) {
+      sizeArr.push(psOpt.size);
+    }
   }
 
-  // // now take care of selecting size option
-  // let sizeOptions = pp_patterns_catalog[catSEL.value[0].Object.keys[0]];
-  // let pp_size_selections = Object.keys(Object.keys(sizeOptions));
-
-  // console.log(sizeOptions);
-
-  // const sizeSEL = document.getElementById("select_your_pp_size");
-  // for (let sizeOpt of pp_size_selections) {
-  //   let tempOpt = document.createElement("option")
-  //   tempOpt.value = sizeOpt;
-  //   tempOpt.text = sizeOpt;
-  //   sizeSEL.appendChild(tempOpt);
-  // }  
+  const sizeSEL = document.getElementById("select_your_pp_size");
+  for (let sizeOpt of sizeArr) {
+    let tempOpt = document.createElement("option")
+    tempOpt.value = sizeOpt;
+    tempOpt.text = sizeOpt;
+    sizeSEL.appendChild(tempOpt);
+  }  
 }
 
-// //__________________________________________________
-// select pattern shape and size with reaction
-
-// if (pp_patterns.name === heart) {
-//     if (pp_patterns.size === small) {
-      
-//     } else if (pp_patterns.size === base) {
-  
-//     } else {}
-//   }
-//   if (pp_patterns.name === diamond) {
-//     if (pp_patterns.size === small) {
-      
-//     } else if (pp_patterns.size === base) {
-  
-//     } else {}
-//   }
-  
-//   //_____________________________________________
 //   // select prize theme
   
 //   const prize_theme = "";
+//____________________________________
   
 //   fetch('http://example.com/movies.json')
 //     .then(response => response.json())
