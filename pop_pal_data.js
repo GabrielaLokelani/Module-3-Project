@@ -8,7 +8,6 @@ let pp_pattern_sel_cat = "shapes";
 //     -- description
 //     -- preview image
 let pp_patterns_catalog = {
-   // other: {},
   
     shapes: {
       diamond: [
@@ -29,21 +28,21 @@ let pp_patterns_catalog = {
         }
       ],
       hearts: [
-      {         
-        size : "small",
-        description : "The shape you will find in a deck of playing cards, a 10x10 pattern.", 
-        preview_img : ""
-      },
-      {
-        size : "base",
-        description : "The shape you will find in a deck of playing cards, a 20x20 pattern.",
-        preview_img : ""
-      },
-      {
-        size : "large",
-        description : "The shape you will find in a deck of playing cards, a 30x30 pattern.",
-        preview_img : ""
-      }
+        {         
+          size : "small",
+          description : "The shape you will find in a deck of playing cards, a 10x10 pattern.", 
+          preview_img : ""
+        },
+        {
+          size : "base",
+          description : "The shape you will find in a deck of playing cards, a 20x20 pattern.",
+          preview_img : ""
+        },
+        {
+          size : "large",
+          description : "The shape you will find in a deck of playing cards, a 30x30 pattern.",
+          preview_img : ""
+        }
       ],
 
       circle : [
