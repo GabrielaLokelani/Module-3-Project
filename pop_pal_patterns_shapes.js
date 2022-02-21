@@ -12,19 +12,17 @@ const pop_pal_pattern_small_diamond = [
     ]
 
 const pop_pal_colors_small_diamond = {
-    0 : "red",
-    1 : "orange",
-    2 : "yellow",
-    3 : "green",
-    4 : "blue",
-    5 : "indigo",
-    6 : "violet",
-    7 : "lightred",
-    8 : "lightgreen",
-    9 : "lightblue",
-    "a" : [ 210, 167, 78],
-    "b" : [ 167, 78, 210],
-    "c" : [78, 210, 167],
+    0 : "#FF9AA2",
+    1 : "#FFB7B2",
+    2 : "#FFDAC1",
+    3 : "#E2F0CB",
+    4 : "#B5EAD7",
+    5 : "#B8F4FF",
+    6 : "#99CCFF",
+    7 : "#CCCCFF",
+    8 : "#E0B0FF",
+    9 : "#FFCCFF",
+
 }
 
 const pop_pal_pattern_base_diamond = [
@@ -51,19 +49,17 @@ const pop_pal_pattern_base_diamond = [
     ]
 
 const pop_pal_colors_base_diamond = {
-    0 : "red",
-    1 : "orange",
-    2 : "yellow",
-    3 : "green",
-    4 : "blue",
-    5 : "indigo",
-    6 : "violet",
-    7 : "lightred",
-    8 : "lightgreen",
-    9 : "lightblue",
-    "a" : [ 210, 167, 78],
-    "b" : [ 167, 78, 210],
-    "c" : [78, 210, 167],
+    0 : "#FF9AA2",
+    1 : "#FFB7B2",
+    2 : "#FFDAC1",
+    3 : "#E2F0CB",
+    4 : "#B5EAD7",
+    5 : "#B8F4FF",
+    6 : "#99CCFF",
+    7 : "#CCCCFF",
+    8 : "#E0B0FF",
+    9 : "#FFCCFF",
+
 }
 
 const pop_pal_pattern_large_diamond = [
@@ -100,19 +96,17 @@ const pop_pal_pattern_large_diamond = [
     ]
 
 const pop_pal_colors_large_diamond = {
-    0 : "red",
-    1 : "orange",
-    2 : "yellow",
-    3 : "green",
-    4 : "blue",
-    5 : "indigo",
-    6 : "violet",
-    7 : "lightred",
-    8 : "lightgreen",
-    9 : "lightblue",
-    "a" : [ 210, 167, 78],
-    "b" : [ 167, 78, 210],
-    "c" : [78, 210, 167],
+    0 : "#FF9AA2",
+    1 : "#FFB7B2",
+    2 : "#FFDAC1",
+    3 : "#E2F0CB",
+    4 : "#B5EAD7",
+    5 : "#B8F4FF",
+    6 : "#99CCFF",
+    7 : "#CCCCFF",
+    8 : "#E0B0FF",
+    9 : "#FFCCFF",
+
 }
 
 const pop_pal_pattern_small_heart = [
@@ -129,19 +123,15 @@ const pop_pal_pattern_small_heart = [
     ]
 
 const pop_pal_colors_small_heart = {
-    0 : "red",
-    1 : "orange",
-    2 : "yellow",
-    3 : "green",
-    4 : "blue",
-    5 : "indigo",
-    6 : "violet",
-    7 : "lightred",
-    8 : "lightgreen",
-    9 : "lightblue",
-    "a" : [ 210, 167, 78],
-    "b" : [ 167, 78, 210],
-    "c" : [78, 210, 167],
+    0 : "#FF9AA2",
+    1 : "#FFB7B2",
+    2 : "#FFDAC1",
+    3 : "#E2F0CB",
+    4 : "#B5EAD7",
+    5 : "#B8F4FF",
+    6 : "#AAA9E9",
+    7 : "#E0B0FF",
+
 }
 
 const pop_pal_pattern_base_heart = [
@@ -168,19 +158,15 @@ const pop_pal_pattern_base_heart = [
     ]
 
 const pop_pal_colors_base_heart = {
-    0 : "red",
-    1 : "orange",
-    2 : "yellow",
-    3 : "green",
-    4 : "blue",
-    5 : "indigo",
-    6 : "violet",
-    7 : "lightred",
-    8 : "lightgreen",
-    9 : "lightblue",
-    "a" : [ 210, 167, 78],
-    "b" : [ 167, 78, 210],
-    "c" : [78, 210, 167],
+    0 : "#FF9AA2",
+    1 : "#FFB7B2",
+    2 : "#FFDAC1",
+    3 : "#E2F0CB",
+    4 : "#B5EAD7",
+    5 : "#B8F4FF",
+    6 : "#AAA9E9",
+    7 : "#E0B0FF",
+
 }
 
 const pop_pal_pattern_large_heart = [
@@ -217,19 +203,15 @@ const pop_pal_pattern_large_heart = [
     ]
 
 const pop_pal_colors_large_heart = {
-    0 : "red",
-    1 : "orange",
-    2 : "yellow",
-    3 : "green",
-    4 : "blue",
-    5 : "indigo",
-    6 : "violet",
-    7 : "lightred",
-    8 : "lightgreen",
-    9 : "lightblue",
-    "a" : [ 210, 167, 78],
-    "b" : [ 167, 78, 210],
-    "c" : [78, 210, 167],
+    0 : "#FF9AA2",
+    1 : "#FFB7B2",
+    2 : "#FFDAC1",
+    3 : "#E2F0CB",
+    4 : "#B5EAD7",
+    5 : "#B8F4FF",
+    6 : "#AAA9E9",
+    7 : "#E0B0FF",
+
 }
 
 const pop_pal_pattern_small_square = [
@@ -246,19 +228,17 @@ const pop_pal_pattern_small_square = [
     ]
 
 const pop_pal_colors_small_square = {
-    0 : "red",
-    1 : "orange",
-    2 : "yellow",
-    3 : "green",
-    4 : "blue",
-    5 : "indigo",
-    6 : "violet",
-    7 : "lightred",
-    8 : "lightgreen",
-    9 : "lightblue",
-    "a" : [ 210, 167, 78],
-    "b" : [ 167, 78, 210],
-    "c" : [78, 210, 167],
+    0 : "#FF9AA2",
+    1 : "#FFB7B2",
+    2 : "#FFDAC1",
+    3 : "#E2F0CB",
+    4 : "#B5EAD7",
+    5 : "#B8F4FF",
+    6 : "#99CCFF",
+    7 : "#CCCCFF",
+    8 : "#E0B0FF",
+    9 : "#FFCCFF",
+
 }
 
 const pop_pal_pattern_base_square = [
@@ -285,19 +265,17 @@ const pop_pal_pattern_base_square = [
     ]
 
 const pop_pal_colors_base_square = {
-    0 : "red",
-    1 : "orange",
-    2 : "yellow",
-    3 : "green",
-    4 : "blue",
-    5 : "indigo",
-    6 : "violet",
-    7 : "lightred",
-    8 : "lightgreen",
-    9 : "lightblue",
-    "a" : [ 210, 167, 78],
-    "b" : [ 167, 78, 210],
-    "c" : [78, 210, 167],
+    0 : "#FF9AA2",
+    1 : "#FFB7B2",
+    2 : "#FFDAC1",
+    3 : "#E2F0CB",
+    4 : "#B5EAD7",
+    5 : "#B8F4FF",
+    6 : "#99CCFF",
+    7 : "#CCCCFF",
+    8 : "#E0B0FF",
+    9 : "#FFCCFF",
+
 }
 
 const pop_pal_pattern_large_square = [
@@ -334,19 +312,17 @@ const pop_pal_pattern_large_square = [
     ]
 
 const pop_pal_colors_large_square = {
-    0 : "red",
-    1 : "orange",
-    2 : "yellow",
-    3 : "green",
-    4 : "blue",
-    5 : "indigo",
-    6 : "violet",
-    7 : "lightred",
-    8 : "lightgreen",
-    9 : "lightblue",
-    "a" : [ 210, 167, 78],
-    "b" : [ 167, 78, 210],
-    "c" : [78, 210, 167],
+    0 : "#FF9AA2",
+    1 : "#FFB7B2",
+    2 : "#FFDAC1",
+    3 : "#E2F0CB",
+    4 : "#B5EAD7",
+    5 : "#B8F4FF",
+    6 : "#99CCFF",
+    7 : "#CCCCFF",
+    8 : "#E0B0FF",
+    9 : "#FFCCFF",
+
 }
 
 const pop_pal_pattern_small_circle = [
@@ -363,19 +339,17 @@ const pop_pal_pattern_small_circle = [
     ]
 
 const pop_pal_colors_small_circle = {
-    0 : "red",
-    1 : "orange",
-    2 : "yellow",
-    3 : "green",
-    4 : "blue",
-    5 : "indigo",
-    6 : "violet",
-    7 : "lightred",
-    8 : "lightgreen",
-    9 : "lightblue",
-    "a" : [ 210, 167, 78],
-    "b" : [ 167, 78, 210],
-    "c" : [78, 210, 167],
+    0 : "#FF9AA2",
+    1 : "#FFB7B2",
+    2 : "#FFDAC1",
+    3 : "#E2F0CB",
+    4 : "#B5EAD7",
+    5 : "#B8F4FF",
+    6 : "#99CCFF",
+    7 : "#CCCCFF",
+    8 : "#E0B0FF",
+    9 : "#FFCCFF",
+
 }
 
 const pop_pal_pattern_base_circle = [
@@ -402,19 +376,17 @@ const pop_pal_pattern_base_circle = [
     ]
 
 const pop_pal_colors_base_circle = {
-    0 : "red",
-    1 : "orange",
-    2 : "yellow",
-    3 : "green",
-    4 : "blue",
-    5 : "indigo",
-    6 : "violet",
-    7 : "lightred",
-    8 : "lightgreen",
-    9 : "lightblue",
-    "a" : [ 210, 167, 78],
-    "b" : [ 167, 78, 210],
-    "c" : [78, 210, 167],
+    0 : "#FF9AA2",
+    1 : "#FFB7B2",
+    2 : "#FFDAC1",
+    3 : "#E2F0CB",
+    4 : "#B5EAD7",
+    5 : "#B8F4FF",
+    6 : "#99CCFF",
+    7 : "#CCCCFF",
+    8 : "#E0B0FF",
+    9 : "#FFCCFF",
+
 }
 
 const pop_pal_pattern_large_circle = [
@@ -451,19 +423,17 @@ const pop_pal_pattern_large_circle = [
     ]
 
 const pop_pal_colors_large_circle = {
-    0 : "red",
-    1 : "orange",
-    2 : "yellow",
-    3 : "green",
-    4 : "blue",
-    5 : "indigo",
-    6 : "violet",
-    7 : "lightred",
-    8 : "lightgreen",
-    9 : "lightblue",
-    "a" : [ 210, 167, 78],
-    "b" : [ 167, 78, 210],
-    "c" : [78, 210, 167],
+    0 : "#FF9AA2",
+    1 : "#FFB7B2",
+    2 : "#FFDAC1",
+    3 : "#E2F0CB",
+    4 : "#B5EAD7",
+    5 : "#B8F4FF",
+    6 : "#99CCFF",
+    7 : "#CCCCFF",
+    8 : "#E0B0FF",
+    9 : "#FFCCFF",
+
 }
 
 export {
