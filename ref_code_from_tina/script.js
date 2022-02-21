@@ -204,5 +204,5 @@ formListener.addEventListener("submit", (e) => {
                   console.log(tempDiv, contactsDIV.innerHTML) }
 );
 
-// rootDIV.appendChild(formDIV);
-// console.log(rootDIV.innerHTML)
+rootDIV.appendChild(formDIV);
+console.log(rootDIV.innerHTML)
