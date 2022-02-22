@@ -7,9 +7,9 @@ let num2pop = 0;
 let curr_pop_cnt = 0;
 
 function setGrid(numColums, numRows, pat, pat_colors) {
-    const rootDIV = document.getElementById('root');
+    const rootDIV = document.getElementById('game_field');
 
-    const myDIV = document.createElement('div');
+    // const myDIV = document.createElement('div');
 
     let gridHTML = '<div class="game">';
 
@@ -36,11 +36,12 @@ function setGrid(numColums, numRows, pat, pat_colors) {
     gridHTML += '</table>';
 
     gridHTML += '</div>';
-    myDIV.innerHTML = gridHTML;
+    // myDIV.innerHTML = gridHTML;
 
-    rootDIV.appendChild(myDIV);
+    rootDIV.innerHTML = gridHTML;
 
-    myDIV.addEventListener("click", (e) => {
+
+    rootDIV.addEventListener("click", (e) => {
         if (e.target.className == "button") {
             // insert sound effect here but before line 60 
             e.target.className = "button_active";
