@@ -57,6 +57,10 @@ function setGrid(numColums, numRows, pat, pat_colors) {
                 console.log("CONGRATULATIONS!!! You POPPED all the spots for this pattern!")
                 console.log("\n*** TIME TO COMPLETE: "+time2complete_in_secs+" seconds ***")
             }
+            
+            let audio = new Audio("popSound.mp3");
+            audio.play();
+            
         }
     });
 }
