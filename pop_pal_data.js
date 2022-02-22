@@ -1,6 +1,3 @@
-let pp_pattern_sel_name = "diamond";
-let pp_pattern_sel_size = "base";
-let pp_pattern_sel_cat = "shapes";
 // pp_patterns_catalog structure:
 // -- category 
 //   -- name
@@ -27,7 +24,7 @@ let pp_patterns_catalog = {
           preview_img : ""
         }
       ],
-      hearts: [
+      heart: [
         {         
           size : "small",
           description : "The shape you will find in a deck of playing cards, a 10x10 pattern.", 
@@ -83,4 +80,4 @@ let pp_patterns_catalog = {
   
 }
   
-export {pp_patterns_catalog, pp_pattern_sel_name, pp_pattern_sel_size, pp_pattern_sel_cat};
+export {pp_patterns_catalog};

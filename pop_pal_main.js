@@ -1,6 +1,7 @@
 
 import {setGrid} from "./pop_pal_play.js"
-import {set_up_options} from "./pop_pal_options.js"
+import {pp_patterns_catalog} from "./pop_pal_data.js";
+import {set_up_menu_bar, set_up_options, pp_pattern_sel_name, pp_pattern_sel_size, pp_pattern_sel_cat} from "./pop_pal_options.js"
 import {pop_pal_pattern_small_heart, pop_pal_colors_small_heart} from "./pop_pal_patterns_shapes.js"
 import {pop_pal_pattern_base_heart, pop_pal_colors_base_heart} from "./pop_pal_patterns_shapes.js"
 import {pop_pal_pattern_large_heart, pop_pal_colors_large_heart} from "./pop_pal_patterns_shapes.js"
@@ -15,8 +16,8 @@ import {pop_pal_pattern_base_circle, pop_pal_colors_base_circle} from "./pop_pal
 import {pop_pal_pattern_large_circle, pop_pal_colors_large_circle} from "./pop_pal_patterns_shapes.js"
 
 
-// let pattern = pop_pal_pattern_small_heart;
-// let pattern_colors = pop_pal_colors_small_heart;
+let pattern = pop_pal_pattern_small_heart;
+let pattern_colors = pop_pal_colors_small_heart;
 // let pattern = pop_pal_pattern_base_heart;
 // let pattern_colors = pop_pal_colors_base_heart;
 // let pattern = pop_pal_pattern_large_heart;
@@ -35,16 +36,20 @@ import {pop_pal_pattern_large_circle, pop_pal_colors_large_circle} from "./pop_p
 // let pattern_colors = pop_pal_colors_large_square;
 // let pattern = pop_pal_pattern_small_diamond;
 // let pattern_colors = pop_pal_colors_small_diamond;
-let pattern = pop_pal_pattern_base_diamond;
-let pattern_colors = pop_pal_colors_base_diamond;
+// let pattern = pop_pal_pattern_base_diamond;
+// let pattern_colors = pop_pal_colors_base_diamond;
 // let pattern = pop_pal_pattern_large_diamond;
 // let pattern_colors = pop_pal_colors_large_diamond;
 
 main()
 
 function main() {
+    set_up_menu_bar()
     game_options()
     game_play(pattern, pattern_colors);
+
+    document.getElementById('game_field').style.display = "none";
+
 }
 
 function about(){
@@ -52,13 +57,15 @@ function about(){
 }
 
 function game_options() {
-   set_up_options()
+    set_up_options()
 }
 
-function game_play(pat, pat_colors) {
-    let num_rows = pat.length;
-    let num_cols = pat[0][0].length;
-    setGrid(num_rows, num_cols, pat, pat_colors);
+function game_play() {
+    eval(`pattern = pop_pal_pattern_${pp_pattern_sel_size}_${pp_pattern_sel_name}`);
+    eval(`pattern_colors = pop_pal_colors_${pp_pattern_sel_size}_${pp_pattern_sel_name}`);
+    let num_rows = pattern.length;
+    let num_cols = pattern[0][0].length;
+    setGrid(num_rows, num_cols, pattern, pattern_colors);
 }
 
 function game_start() {
@@ -81,3 +88,5 @@ function enable_sound(){
 function disable_sound(){
     // Yeah...yeah...
 }
+
+export { game_play }

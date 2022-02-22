@@ -1,12 +1,14 @@
-import {pp_patterns_catalog, pp_pattern_sel_name, pp_pattern_sel_size, pp_pattern_sel_cat} from "./pop_pal_data.js";
+import {pp_patterns_catalog} from "./pop_pal_data.js";
+import {game_play} from "./pop_pal_main.js"
 
+let pp_pattern_sel_name = "diamond";
+let pp_pattern_sel_size = "base";
+let pp_pattern_sel_cat = "shapes";
 
 function set_up_options() {
-  console.log(pp_patterns_catalog)
-  console.log("# of categories " + Object.keys(pp_patterns_catalog).length);
  
   const optionsHTML = `
-  <div type="container-fluid" style="text-size: 1em"> 
+  <div type="container-fluid" style="text-align: center"> 
       <p>Select Your Category</p>
         <select id="select_your_category" name="select_your_category"></select>
       <p>Select Your Pattern</p>
@@ -22,9 +24,9 @@ function set_up_options() {
   let optionsDIV = document.createElement("div");
   optionsDIV.innerHTML = optionsHTML;
   
-  const rootDIV = document.getElementById("root")
+  const rootDIV = document.getElementById("game_options")
   rootDIV.appendChild(optionsDIV);
-
+  
   // populate the category selection options
   const catSEL = document.getElementById("select_your_category");
   for (let catOpt of pp_pat_categories) {
@@ -61,16 +63,63 @@ function set_up_options() {
     tempOpt.value = sizeOpt;
     tempOpt.text = sizeOpt;
     sizeSEL.appendChild(tempOpt);
-  }  
+  }
+
+  catSEL.addEventListener("click", e => {
+    pp_pattern_sel_cat = e.target.value;
+  })  
+  patSEL.addEventListener("click", e => {
+    pp_pattern_sel_name = e.target.value;
+  })  
+  sizeSEL.addEventListener("click", e => {
+    pp_pattern_sel_size = e.target.value;
+  })  
 }
 
 //   // select prize theme
   
-//   const prize_theme = "";
-//____________________________________
-  
-//   fetch('http://example.com/movies.json')
-//     .then(response => response.json())
-//     .then(data => console.log(data));
+function set_up_menu_bar() {
+  const menuDIV = document.getElementById("menu_options");
 
-export {set_up_options} 
+  let menuBarDIV = document.createElement("div");
+
+  let prev_e = ""; // Need to track the previous event to de-activate it when a new one is selected.
+
+  const menuBarHTML = `
+  <div class="topnav">
+  <a id="mb_options" class="menu">Options</a>
+  <a id="mb_start" class="menu">Start</a>
+  <a id="mb_about" class="menu">About</a>
+</div>
+  `
+  menuBarDIV.innerHTML = menuBarHTML;
+
+  menuBarDIV.addEventListener("click", e => {
+    if(e.target.className == "menu") {
+      e.target.className = "menu-active";
+      if(prev_e != ""){
+        prev_e.target.className = "menu";
+      }
+      prev_e = e;
+      switch (e.target.id) {
+        case "mb_options":
+          document.getElementById('game_field').style.display = "none";
+          document.getElementById('game_options').style.display = "";
+
+          break;
+      
+        case "mb_start":
+          document.getElementById('game_field').style.display = "";
+          document.getElementById('game_options').style.display = "none";
+          game_play();
+          break;
+        default:
+          break;
+      }
+    }
+  })
+
+  menuDIV.appendChild(menuBarDIV);
+
+}
+export {set_up_options, set_up_menu_bar, pp_pattern_sel_name, pp_pattern_sel_size, pp_pattern_sel_cat} 
