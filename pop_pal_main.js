@@ -74,8 +74,10 @@ function disable_sound(){
 function game_about() {
     const aboutDIV = document.getElementById('game_about');
 
-    let aboutHTML = `<h1> ABOUT POP PAL </h1>
-                     <p>POP PAL is a virtual version of the now popular "Pop-It" silicon figiting toys...popular among adults as well as kids. While it was our team member Nathan that brought the "Pop-It" toy to our attention, via his sister's kids, the real inspiration for creating the POP PAL was due to this <a href="https://www.youtube.com/watch?v=icO3YuuE1m0">video</a>. Our hope is this virtual version of the "Pop-It" toy will solve some of the problems outlined in the video and keep everyone in the family equally happy! ;-)</p>
+    let aboutHTML = `
+                <div>
+                     <h1> ABOUT POP PAL </h1>
+                     <p>POP PAL is a virtual version of the now popular "Pop-It" silicon figiting toys...popular among adults as well as kids. While it was our team member Nathan that brought the "Pop-It" toy to our attention, via his sister's kids, the real inspiration for creating the POP PAL was due to this <a href="https://www.youtube.com/watch?v=icO3YuuE1m0" target="_blank">video</a>. Our hope is this virtual version of the "Pop-It" toy will solve some of the problems outlined in the video and keep everyone in the family equally happy! ;-)</p>
                      
                      <h2><u>KU-FS-2021Q4-COHORT "MODULE 3" PROJECT TEAM:</u> <b>MaGaNaJe</b></h2>
                      <br>
@@ -83,7 +85,8 @@ function game_about() {
                      <h3><b>GABRIELA KADZIELAWA</b> - TEAM ROCK-STAR, CODE DEV & BLING-BLING LEAD</h3>
                      <h3><b>NATE WILKUS</b> - GAME CONCEPT, CODE DEV & DEV SUPPORT</h3>
                      <h3><b>JELKIN FERRAND</b> - GAME TESTING, CODE DEV & DEV SUPPORT</h3>
-                     `
+                </div>`
+                     
 
     aboutDIV.innerHTML = aboutHTML
 }
