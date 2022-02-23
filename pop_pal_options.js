@@ -120,6 +120,38 @@ function set_up_menu_bar() {
   })
 
   menuDIV.appendChild(menuBarDIV);
+// __________________________________________________________________
+  // fetch('https://type.fit/api/quotes')
+  //   //.then(res => res.json())
+  //   .then(res => {
+  //       if (res.ok) {
+  //           console.log('SUCCESS');
+  //       } else {
+  //           console.log("Not Successful");
+  //       }
+  //   })
+  //   .then(data => console.log(data))
+  //   .catch(error => console.log('ERROR'))
+
+  const awardsDIV = document.getElementById('game_award');
+  console.log(awardsDIV);
+  awardsDIV.innerHTML = awardsDIV;
+
+  fetch("https://type.fit/api/quotes")
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+    console.log(data);
+    console.log(Object.keys(data[0]));
+    // console.log(Object.keys.text[0]);
+    let api_1 = Object.keys(data[0]); 
+    console.log(api_1); 
+  });
+
+
+
+
 
 }
 export {set_up_options, set_up_menu_bar, pp_pattern_sel_name, pp_pattern_sel_size, pp_pattern_sel_cat} 
