@@ -82,7 +82,7 @@ function game_about() {
                      <h3><b>MANUEL "MANNY" MURO</b> - PROJECT LEAD, ARCHITECT, DATA STRUCTURES & INTEGRATION</h3>
                      <h3><b>GABRIELA KADZIELAWA</b> - TEAM ROCK-STAR, CODE DEV & BLING-BLING LEAD</h3>
                      <h3><b>NATE WILKUS</b> - GAME CONCEPT, CODE DEV & DEV SUPPORT</h3>
-                     <h3><b>JELKIN FERRAND</b> - GAME TESTING, CODE DEV & DEVELOPMENT SUPPROT</h3>
+                     <h3><b>JELKIN FERRAND</b> - GAME TESTING, CODE DEV & DEV SUPPORT</h3>
                      `
 
     aboutDIV.innerHTML = aboutHTML

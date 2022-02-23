@@ -153,6 +153,14 @@ p {
 
 }
 
+#game_about {
+    text-align: center;
+}
+.about p {
+    text-align: justify;
+
+}
+
 @keyframes colorchange{	
 	0%{
 	color: #ff6698;
