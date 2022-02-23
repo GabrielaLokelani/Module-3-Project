@@ -1,9 +1,11 @@
 import {pp_patterns_catalog} from "./pop_pal_data.js";
-import {game_play} from "./pop_pal_main.js"
+import {game_play} from "./pop_pal_main.js";
+//import {award_theme_selection} from "./pop_pal_prizeAPIs.js"
 
 let pp_pattern_sel_name = "diamond";
-let pp_pattern_sel_size = "base";
+let pp_pattern_sel_size = "small";
 let pp_pattern_sel_cat = "shapes";
+let pp_award_sel_theme = "motivation";
 
 function set_up_options() {
  
@@ -16,7 +18,11 @@ function set_up_options() {
       <p>Select Your Size</p>
         <select id="select_your_pp_size" name="select_your_pp_size"></select>
       <p>Select Your Award Theme</p>
-        <select id="select_your_award_theme" name="select_your_award_theme"></select>
+      <select id="select_your_award_theme" name="select_your_award_theme">
+          <option id="motivation">motivation</option>
+          <option id="space">space</option>
+          <option id="cats">cats</option>
+        </select>
   </div>`
   
   let pp_pat_categories = Object.keys(pp_patterns_catalog);
@@ -26,6 +32,8 @@ function set_up_options() {
   
   const rootDIV = document.getElementById("game_options")
   rootDIV.appendChild(optionsDIV);
+
+  const awardSEL = document.getElementById("select_your_award_theme");
   
   // populate the category selection options
   const catSEL = document.getElementById("select_your_category");
@@ -73,10 +81,88 @@ function set_up_options() {
   })  
   sizeSEL.addEventListener("click", e => {
     pp_pattern_sel_size = e.target.value;
-  })  
-}
+  }) 
+  awardSEL.addEventListener("click", e => {
+    pp_award_sel_theme = e.target.value;
+  })
+// APIs  ________________________________________________________________
 
-//   // select prize theme
+  // fetch('https://type.fit/api/quotes')
+  //   //.then(res => res.json())
+  //   .then(res => {
+  //       if (res.ok) {
+  //           console.log('SUCCESS');
+  //       } else {
+  //           console.log("Not Successful");
+  //       }
+  //   })
+  //   .then(data => console.log(data))
+  //   .catch(error => console.log('ERROR'))
+
+  //let award_theme_selection = {motivation, space, cats};
+
+  const awardsDIV = document.getElementById('game_award');
+  console.log(awardsDIV);
+  awardsDIV.innerHTML = "";
+
+  if (pp_award_sel_theme === "motivation") {
+
+    fetch("https://type.fit/api/quotes")
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      //console.log(data);
+      const api_motivation = Object(data);
+      // console.log(Object.values(data[0]));
+      // console.log(api_motivation);
+
+      api_motivation.forEach((quote) => {
+        console.log(quote.text);
+        console.log(quote.author);
+        pp_award_sel_theme = api_motivation;  
+
+      //   let tempQuoteHTML = `
+      //   <div class="container-fluid" class="border-start rounded-3 border border-2">
+      //     <div class="shadow p-3 mb-5 bg-body rounded text-center">Regular shadow
+      //       <h2 style="text-align: center">${quote.text}</h2>
+      //       <h4 style="text-align: center>${quote.author}</h4>
+      //     </div
+      //   </div>`
+
+      //   awardsDIV.innerHTML += tempQuoteHTML;
+      });
+    });
+
+  } else if (pp_award_sel_theme === "space") {
+    fetch("https://images-api.nasa.gov/5akgAwJqTYMb0w4loSNz2Swxda8NERKSonOvOWQx/search") // insert space api here
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      console.log(data);
+      //const api_space = data.data;
+      //console.log(api_space); 
+      pp_award_sel_theme = api_space;      
+    });
+
+  } 
+  else if (pp_award_sel_theme === "cats") {
+    fetch("") // insert cat api here
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(data) {
+      console.log(data);
+      const api_cats = data.data;
+      console.log(api_cats);
+      pp_award_sel_theme = api_cats;  
+    });
+  };
+ 
+};
+
+// Menu Bar ___________________________________________________________
   
 function set_up_menu_bar() {
   const menuDIV = document.getElementById("menu_options");
@@ -120,38 +206,5 @@ function set_up_menu_bar() {
   })
 
   menuDIV.appendChild(menuBarDIV);
-// __________________________________________________________________
-  // fetch('https://type.fit/api/quotes')
-  //   //.then(res => res.json())
-  //   .then(res => {
-  //       if (res.ok) {
-  //           console.log('SUCCESS');
-  //       } else {
-  //           console.log("Not Successful");
-  //       }
-  //   })
-  //   .then(data => console.log(data))
-  //   .catch(error => console.log('ERROR'))
-
-  const awardsDIV = document.getElementById('game_award');
-  console.log(awardsDIV);
-  awardsDIV.innerHTML = awardsDIV;
-
-  fetch("https://type.fit/api/quotes")
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(data) {
-    console.log(data);
-    console.log(Object.keys(data[0]));
-    // console.log(Object.keys.text[0]);
-    let api_1 = Object.keys(data[0]); 
-    console.log(api_1); 
-  });
-
-
-
-
-
 }
-export {set_up_options, set_up_menu_bar, pp_pattern_sel_name, pp_pattern_sel_size, pp_pattern_sel_cat} 
+export {set_up_options, set_up_menu_bar, pp_pattern_sel_name, pp_pattern_sel_size, pp_pattern_sel_cat, pp_award_sel_theme}; 
