@@ -7,6 +7,17 @@ let pp_pattern_sel_cat = "shapes";
 
 function set_up_options() {
  
+  // const optionsHTML = `
+  // <div type="container-fluid" style="text-align: center"> 
+  //     <p>Select Your Category</p>
+  //       <select id="select_your_category" name="select_your_category"></select>
+  //     <p>Select Your Pattern</p>
+  //       <select id="select_your_pattern" name="select_your_pattern"></select>
+  //     <p>Select Your Size</p>
+  //       <select id="select_your_pp_size" name="select_your_pp_size"></select>
+  //     <p>Select Your Award Theme</p>
+  //       <select id="select_your_award_theme" name="select_your_award_theme"></select>
+  // </div>`
   const optionsHTML = `
   <div type="container-fluid" style="text-align: center"> 
       <p>Select Your Category</p>
@@ -15,8 +26,6 @@ function set_up_options() {
         <select id="select_your_pattern" name="select_your_pattern"></select>
       <p>Select Your Size</p>
         <select id="select_your_pp_size" name="select_your_pp_size"></select>
-      <p>Select Your Award Theme</p>
-        <select id="select_your_award_theme" name="select_your_award_theme"></select>
   </div>`
   
   let pp_pat_categories = Object.keys(pp_patterns_catalog);
