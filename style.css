@@ -1,9 +1,8 @@
-/* put a smackin css page in this page*/ 
 
+/* body information of html goes in this section */
 
   body {
-    /* margin: 85px; */
-    padding: 25px 10px 150px;
+    padding: 0px 0px 300px 0px;
 
     /* background-color: #f876de;
     background-image: linear-gradient(315deg, #f876de 0%, #b9d1eb 74%); */
@@ -12,23 +11,21 @@
     background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
 }
 
+/* that pop-it as a whole is worked on here */
+
 .pop-it {
-    /* padding: 25px 50px 75px 100px; */
-    /* padding-left: 50px; */ 
+    /* padding-top: 50px;  */
     border-radius: 10px;
     border: solid black 0.5px 10px;
-    /* height: 300px; */
-    /* width: 200px; */
+    /* height: 100px;
+    width: 100px; */
     margin: auto;
-
-    /* background-color: #f876de;
-    background-image: linear-gradient(315deg, #f876de 0%, #b9d1eb 74%); */
-
     background-color: #FFDBFF;
     background-image: linear-gradient(315deg, #FFDBFF 25%, #7ee8fa 65%);
-
     box-shadow: rgba(0, 0, 0, 0.25) 0px 20px 30px, rgba(0, 0, 0, 0.30) 20px 20px 30px;
 }
+
+/* this is where the poppers of the pop-it are styled */
 
 .button {
     background-color: #FFBCD9;
@@ -37,7 +34,6 @@
     width: 30px;
     border-radius: 50%;
     height: 30px;
-    outline: none;
 }
 
 
@@ -66,26 +62,111 @@ th, td {
     border: solid black 0.5px;
 }
 
+/* this styles the navigation bar */
+
 .topnav {
     overflow: hidden;
-    background-color: #333;
+    background-color: #098EDA;
 }
   
 .topnav a {
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 15px 15px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 28px;
+    font-family: 'Gorditas';
+    font-weight: 400;
 }
 
 .topnav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #FFDDF4;
+    color: white;
+    -webkit-text-stroke: .75px #23430C;
+    
 }
 
 .topnav a.menu-active {
-    background-color: #04AA6D;
+    background-color: #066EAD;
     color: white;
 }
+
+#select_your_category {
+  color: #0C9BBD;
+  font-family: 'Gorditas';
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+  border: solid black 0.5px 10px;
+}
+
+#select_your_pattern {
+  color: #2FBDBD;
+  font-family: 'Gorditas';
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+  border: solid black 0.5px 10px;
+}
+
+#select_your_pp_size {
+  color: #90DCD0;
+  font-family: 'Gorditas';
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+  border: solid black 0.5px 10px;
+}
+
+#select_your_award_theme {
+  color: #FDC2EB;
+  font-family: 'Gorditas';
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+  border: solid black 0.5px 10px;
+}
+
+p {
+  color:  #FFB700;
+  font-family: 'Gorditas';
+  font-weight: 400;
+  margin-top: 5px;
+  font-size: 22px;
+}
+
+/* this is for the tile */
+
+#game_title {
+  margin-top: 5px;
+  text-align: center;
+  font-family: 'Modak';
+  font-size: 45px;
+  animation: colorchange 5s infinite normal;
+	-webkit-text-stroke: .65px #282828;
+	text-shadow: 0px 4px 4px #282828;
+
+}
+
+@keyframes colorchange{	
+	0%{
+	color: #ff6698;
+	}
+	25%{
+	color: #ffb366;
+	}
+	50%{
+	color: #ffff66;
+	}
+	75%{
+	color: 	#98ff66;
+	}
+	100%{
+	color: lightblue;
+	}
+	}
