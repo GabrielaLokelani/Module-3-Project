@@ -16,8 +16,8 @@ import {pop_pal_pattern_base_circle, pop_pal_colors_base_circle} from "./pop_pal
 import {pop_pal_pattern_large_circle, pop_pal_colors_large_circle} from "./pop_pal_patterns_shapes.js"
 
 
-let pattern = pop_pal_pattern_small_heart;
-let pattern_colors = pop_pal_colors_small_heart;
+let pattern = [];
+let pattern_colors = [];
 // let pattern = pop_pal_pattern_base_heart;
 // let pattern_colors = pop_pal_colors_base_heart;
 // let pattern = pop_pal_pattern_large_heart;
@@ -46,9 +46,12 @@ main()
 function main() {
     set_up_menu_bar()
     game_options()
-    game_play(pattern, pattern_colors);
+    game_play();
+    game_about();
 
+    document.getElementById('game_options').style.display = "";
     document.getElementById('game_field').style.display = "none";
+    document.getElementById('game_about').style.display = "none";
 
 }
 
@@ -61,6 +64,7 @@ function game_options() {
 }
 
 function game_play() {
+    // eval(`import {pop_pal_pattern_${pp_pattern_sel_size}_${pp_pattern_sel_name}, pop_pal_colors_${pp_pattern_sel_size}_${pp_pattern_sel_name}} from "./pop_pal_patterns_${pp_pattern_sel_cat}.js`)
     eval(`pattern = pop_pal_pattern_${pp_pattern_sel_size}_${pp_pattern_sel_name}`);
     eval(`pattern_colors = pop_pal_colors_${pp_pattern_sel_size}_${pp_pattern_sel_name}`);
     let num_rows = pattern.length;
@@ -89,4 +93,20 @@ function disable_sound(){
     // Yeah...yeah...
 }
 
+function game_about() {
+    const aboutDIV = document.getElementById('game_about');
+
+    let aboutHTML = `<h1> ABOUT POP PAL </h1>
+                     <p>POP PAL is a virtual version of the now popular "Pop-It" silicon figiting toys...popular among adults as well as kids. While it was our team member Nathan that brought the "Pop-It" toy to our attention, via his sister's kids, the real inspiration for creating the POP PAL was due to this <a href="https://www.youtube.com/watch?v=icO3YuuE1m0">video</a>. Our hope is this virtual version of the "Pop-It" toy will solve some of the problems outlined in the video and keep everyone in the family equally happy! ;-)</p>
+                     
+                     <h2><u>KU-FS-2021Q4-COHORT "MODULE 3" PROJECT TEAM:</u> <b>MaGaNaJe</b></h2>
+                     <br>
+                     <h3><b>MANUEL "MANNY" MURO</b> - PROJECT LEAD, ARCHITECT, DATA STRUCTURES & INTEGRATION</h3>
+                     <h3><b>GABRIELA KADZIELAWA</b> - TEAM ROCK-STAR, CODE DEV & BLING-BLING LEAD</h3>
+                     <h3><b>NATE WILKUS</b> - GAME CONCEPT, CODE DEV & DEV SUPPORT</h3>
+                     <h3><b>JELKIN FERRAND</b> - GAME TESTING, CODE DEV & DEVELOPMENT SUPPROT</h3>
+                     `
+
+    aboutDIV.innerHTML = aboutHTML
+}
 export { game_play }

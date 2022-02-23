@@ -6,6 +6,8 @@ let last_click_tstamp = 0;
 let num2pop = 0;
 let curr_pop_cnt = 0;
 
+let audio = new Audio("popSound.mp3");
+
 function setGrid(numColums, numRows, pat, pat_colors) {
     const rootDIV = document.getElementById('game_field');
 
@@ -62,11 +64,10 @@ function setGrid(numColums, numRows, pat, pat_colors) {
                 curr_pop_cnt = 0;
             }
             
-            let audio = new Audio("popSound.mp3");
             audio.play();
             
         }
     });
 }
 
-export {setGrid, first_click, curr_pop_cnt, num2pop};
+export {setGrid, first_click, curr_pop_cnt, num2pop, first_click_tstamp};
