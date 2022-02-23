@@ -2,7 +2,7 @@ import {pp_patterns_catalog} from "./pop_pal_data.js";
 import {game_play} from "./pop_pal_main.js"
 
 let pp_pattern_sel_name = "diamond";
-let pp_pattern_sel_size = "base";
+let pp_pattern_sel_size = "small";
 let pp_pattern_sel_cat = "shapes";
 
 function set_up_options() {
@@ -51,7 +51,7 @@ function set_up_options() {
   let patSubOptions = patOptions[patSEL.value];
   let sizeArr = [];
   for ( let psOpt of patSubOptions) {
-    console.log(psOpt.size);
+    // console.log(psOpt.size);
     if (psOpt.size != null) {
       sizeArr.push(psOpt.size);
     }
@@ -68,14 +68,14 @@ function set_up_options() {
   catSEL.addEventListener("click", e => {
     pp_pattern_sel_cat = e.target.value;
   })  
-  patSEL.addEventListener("click", e => {
+  patSEL.addEventListener("change", e => {
     pp_pattern_sel_name = e.target.value;
   })  
-  sizeSEL.addEventListener("click", e => {
+  sizeSEL.addEventListener("change", e => {
     pp_pattern_sel_size = e.target.value;
   })  
-}
 
+}
 //   // select prize theme
   
 function set_up_menu_bar() {

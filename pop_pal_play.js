@@ -57,6 +57,9 @@ function setGrid(numColums, numRows, pat, pat_colors) {
                 let time2complete_in_secs = (last_click_tstamp - first_click_tstamp) / 1000;
                 console.log("CONGRATULATIONS!!! You POPPED all the spots for this pattern!")
                 console.log("\n*** TIME TO COMPLETE: "+time2complete_in_secs+" seconds ***")
+                first_click = false;
+                last_click = false;
+                curr_pop_cnt = 0;
             }
             
             let audio = new Audio("popSound.mp3");
