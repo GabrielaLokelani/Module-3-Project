@@ -143,23 +143,6 @@ p {
   text-shadow: 0px 1px 1px #282828;
 }
 
-h1 {
-  font-family: 'Acme';
-  color:  #ffee00d2;
-  text-shadow: 0px 2px 2px #282828;
-}
-
-h2 {
-  font-family: 'Acme';
-  color: #ffee00d2;;
-  text-shadow: 0px 2px 2px #282828;
-}
-
-h3 {
-  font-family: 'Acme';
-  color:  #ffee00d2;
-  text-shadow: 0px 2px 2px #282828;
-}
 
 /* this is for the tile */
 
@@ -181,6 +164,24 @@ h3 {
     text-align: justify;
     padding-left: 5px;
     padding-right: 5px;
+}
+
+.about h1 {
+  font-family: 'Acme';
+  color:  #ffee00d2;
+  text-shadow: 0px 2px 2px #282828;
+}
+
+.about h2 {
+  font-family: 'Acme';
+  color: #ffee00d2;;
+  text-shadow: 0px 2px 2px #282828;
+}
+
+.about h3 {
+  font-family: 'Acme';
+  color:  #ffee00d2;
+  text-shadow: 0px 2px 2px #282828;
 }
 
 @keyframes colorchange{	

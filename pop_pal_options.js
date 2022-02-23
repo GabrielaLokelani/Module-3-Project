@@ -132,6 +132,7 @@ function set_up_menu_bar() {
 
         case "mb_about":
           document.getElementById('game_options').style.display = "none";
+          document.getElementById('game_status').style.display = "none";
           document.getElementById('game_field').style.display = "none";
           document.getElementById('game_about').style.display = "";
           // window.clearInterval(); // Not needed! ;-)

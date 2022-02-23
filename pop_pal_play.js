@@ -59,7 +59,7 @@ function setGrid(numColums, numRows, pat, pat_colors) {
             curr_pop_cnt++
 
             update_status_bar();
-            // update_status_bar_time();
+            update_status_bar_time();
 
             console.log("Pop #"+curr_pop_cnt + " of "+num2pop);
             last_click = curr_pop_cnt == num2pop ? true : false;
