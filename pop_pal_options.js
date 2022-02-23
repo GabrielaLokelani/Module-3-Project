@@ -1,5 +1,6 @@
 import {pp_patterns_catalog} from "./pop_pal_data.js";
 import {game_play} from "./pop_pal_main.js"
+import {update_status_bar_time} from "./pop_pal_play.js"
 
 let pp_pattern_sel_name = "diamond";
 let pp_pattern_sel_size = "small";
@@ -110,15 +111,20 @@ function set_up_menu_bar() {
         prev_e.target.className = "menu";
       }
       prev_e = e;
+      // window.setInterval(update_status_bar_time(), 1000);
+
       switch (e.target.id) {
         case "mb_options":
           document.getElementById('game_options').style.display = "";
+          document.getElementById('game_status').style.display = "none";
           document.getElementById('game_field').style.display = "none";
           document.getElementById('game_about').style.display = "none";
+          // window.clearInterval(); // Not needed! ;-)
           break;
       
         case "mb_start":
           document.getElementById('game_options').style.display = "none";
+          document.getElementById('game_status').style.display = "";
           document.getElementById('game_field').style.display = "";
           document.getElementById('game_about').style.display = "none";
           game_play();
@@ -128,6 +134,8 @@ function set_up_menu_bar() {
           document.getElementById('game_options').style.display = "none";
           document.getElementById('game_field').style.display = "none";
           document.getElementById('game_about').style.display = "";
+          // window.clearInterval(); // Not needed! ;-)
+
           break;
 
         default:
