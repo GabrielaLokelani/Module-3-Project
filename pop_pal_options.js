@@ -103,16 +103,24 @@ function set_up_menu_bar() {
       prev_e = e;
       switch (e.target.id) {
         case "mb_options":
-          document.getElementById('game_field').style.display = "none";
           document.getElementById('game_options').style.display = "";
-
+          document.getElementById('game_field').style.display = "none";
+          document.getElementById('game_about').style.display = "none";
           break;
       
         case "mb_start":
-          document.getElementById('game_field').style.display = "";
           document.getElementById('game_options').style.display = "none";
+          document.getElementById('game_field').style.display = "";
+          document.getElementById('game_about').style.display = "none";
           game_play();
           break;
+
+        case "mb_about":
+          document.getElementById('game_options').style.display = "none";
+          document.getElementById('game_field').style.display = "none";
+          document.getElementById('game_about').style.display = "";
+          break;
+
         default:
           break;
       }
@@ -133,21 +141,21 @@ function set_up_menu_bar() {
   //   .then(data => console.log(data))
   //   .catch(error => console.log('ERROR'))
 
-  const awardsDIV = document.getElementById('game_award');
-  console.log(awardsDIV);
-  awardsDIV.innerHTML = awardsDIV;
+  // const awardsDIV = document.getElementById('game_award');
+  // console.log(awardsDIV);
+  // awardsDIV.innerHTML = awardsDIV;
 
-  fetch("https://type.fit/api/quotes")
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(data) {
-    console.log(data);
-    console.log(Object.keys(data[0]));
-    // console.log(Object.keys.text[0]);
-    let api_1 = Object.keys(data[0]); 
-    console.log(api_1); 
-  });
+  // fetch("https://type.fit/api/quotes")
+  // .then(function(response) {
+  //   return response.json();
+  // })
+  // .then(function(data) {
+  //   console.log(data);
+  //   console.log(Object.keys(data[0]));
+  //   // console.log(Object.keys.text[0]);
+  //   let api_1 = Object.keys(data[0]); 
+  //   console.log(api_1); 
+  // });
 
 
 
