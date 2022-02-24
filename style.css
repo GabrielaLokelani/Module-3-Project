@@ -211,7 +211,6 @@ p {
 /* this is for the game play stuatus bar in the start */
 
 a#curr_pops.status_label {
-  float: center;
   color: lightskyblue;
   text-align: center;
   padding: 15px 15px;
@@ -223,7 +222,6 @@ a#curr_pops.status_label {
 }
 
 a#curr_pops_val.status_value {
-  float: center;
   color: lightskyblue;
   text-align: center;
   padding: 15px 15px;
@@ -234,7 +232,6 @@ a#curr_pops_val.status_value {
 }
 
 a#num_to_pop.status_label {
-  float: center;
   color: #90DCD0;
   text-align: center;
   padding: 15px 15px;
@@ -245,7 +242,6 @@ a#num_to_pop.status_label {
 }
 
 a#num_to_pop_val.status_value {
-  float: center;
   color: #90DCD0;
   text-align: center;
   padding: 15px 15px;
@@ -256,7 +252,6 @@ a#num_to_pop_val.status_value {
 }
 
 a#curr_time.status_label {
-  float: center;
   color: #FDC2EB;
   text-align: center;
   padding: 15px 15px;
@@ -267,7 +262,6 @@ a#curr_time.status_label {
 }
 
 a#curr_time_value.status_value {
-  float: center;
   color: #FDC2EB;
   text-align: center;
   padding: 15px 15px;
