@@ -157,6 +157,26 @@ p {
 
 }
 
+@keyframes colorchange{	
+	0%{
+	color: #ff6698;
+	}
+	25%{
+	color: #ffb366;
+	}
+	50%{
+	color: #ffff66;
+	}
+	75%{
+	color: 	#98ff66;
+	}
+	100%{
+	color: lightblue;
+	}
+	}
+
+/* the games about page */
+
 #game_about {
     text-align: center;
 }
@@ -184,20 +204,95 @@ p {
   text-shadow: 0px 2px 2px #282828;
 }
 
-@keyframes colorchange{	
-	0%{
-	color: #ff6698;
-	}
-	25%{
-	color: #ffb366;
-	}
-	50%{
-	color: #ffff66;
-	}
-	75%{
-	color: 	#98ff66;
-	}
-	100%{
-	color: lightblue;
-	}
-	}
+.about b {
+  font-weight: bold;
+}
+
+/* this is for the game play stuatus bar in the start */
+
+a#curr_pops.status_label {
+  float: center;
+  color: lightskyblue;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+  font-size: 23px;
+  font-family: 'Gorditas';
+  font-weight: 400;
+  
+}
+
+a#curr_pops_val.status_value {
+  float: center;
+  color: lightskyblue;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+  font-size: 23px;
+  font-family: 'Gorditas';
+  font-weight: 400;
+}
+
+a#num_to_pop.status_label {
+  float: center;
+  color: #90DCD0;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+  font-size: 23px;
+  font-family: 'Gorditas';
+  font-weight: 400;
+}
+
+a#num_to_pop_val.status_value {
+  float: center;
+  color: #90DCD0;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+  font-size: 23px;
+  font-family: 'Gorditas';
+  font-weight: 400;
+}
+
+a#curr_time.status_label {
+  float: center;
+  color: #FDC2EB;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+  font-size: 23px;
+  font-family: 'Gorditas';
+  font-weight: 400;
+}
+
+a#curr_time_value.status_value {
+  float: center;
+  color: #FDC2EB;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+  font-size: 23px;
+  font-family: 'Gorditas';
+  font-weight: 400;
+}
+
+.status-nav {
+  overflow: hidden;
+  background-color: #098EDA;
+}
+
+.status-nav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px 15px;
+  text-decoration: none;
+  font-size: 28px;
+  font-family: 'Gorditas';
+  font-weight: 400;
+}
+
+
+
+
+

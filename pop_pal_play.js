@@ -87,7 +87,7 @@ function setup_game_status() {
     let statusBarDIV = document.createElement("div");
 
     const statusBarHTML = `
-    <div class="topnav">
+    <div class="status-nav">
     <a id="curr_pops" class="status_label">Current Pops: </a>
     <a id="curr_pops_val" class="status_value">0</a>
     <a id="num_to_pop" class="status_label"># to Pop: </a>
