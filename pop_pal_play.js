@@ -23,6 +23,9 @@ function setGrid(numColums, numRows, pat, pat_colors) {
 
     curr_pop_cnt = 0;
     num2pop = 0;
+    first_click = false;
+    last_click = false;
+
 
     for (let col = 0; col < numColums; col++) {
         gridHTML += '<tr>';
@@ -115,7 +118,7 @@ function update_status_bar_time() {
         let stat_time = document.getElementById("curr_time_value")
         stat_time.textContent = ((Date.now() - first_click_tstamp)/1000).toFixed(2);
     }
-    console.log("Interval Time = "+Date.now())
+    // console.log("Interval Time = "+Date.now())
 }
 
 export {setGrid, setup_game_status, update_status_bar_time, first_click, curr_pop_cnt, num2pop, first_click_tstamp};
