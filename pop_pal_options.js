@@ -1,6 +1,8 @@
 import {pp_patterns_catalog} from "./pop_pal_data.js";
-import {game_play} from "./pop_pal_main.js";
-//import {award_theme_selection} from "./pop_pal_prizeAPIs.js"
+
+import {game_play} from "./pop_pal_main.js"
+import {update_status_bar_time} from "./pop_pal_play.js"
+
 
 let pp_pattern_sel_name = "diamond";
 let pp_pattern_sel_size = "small";
@@ -9,6 +11,17 @@ let pp_award_sel_theme = "motivation";
 
 function set_up_options() {
  
+  // const optionsHTML = `
+  // <div type="container-fluid" style="text-align: center"> 
+  //     <p>Select Your Category</p>
+  //       <select id="select_your_category" name="select_your_category"></select>
+  //     <p>Select Your Pattern</p>
+  //       <select id="select_your_pattern" name="select_your_pattern"></select>
+  //     <p>Select Your Size</p>
+  //       <select id="select_your_pp_size" name="select_your_pp_size"></select>
+  //     <p>Select Your Award Theme</p>
+  //       <select id="select_your_award_theme" name="select_your_award_theme"></select>
+  // </div>`
   const optionsHTML = `
   <div type="container-fluid" style="text-align: center"> 
       <p>Select Your Category</p>
@@ -17,12 +30,14 @@ function set_up_options() {
         <select id="select_your_pattern" name="select_your_pattern"></select>
       <p>Select Your Size</p>
         <select id="select_your_pp_size" name="select_your_pp_size"></select>
+
       <p>Select Your Award Theme</p>
       <select id="select_your_award_theme" name="select_your_award_theme">
           <option id="motivation">motivation</option>
           <option id="space">space</option>
           <option id="cats">cats</option>
         </select>
+
   </div>`
   
   let pp_pat_categories = Object.keys(pp_patterns_catalog);
@@ -59,7 +74,7 @@ function set_up_options() {
   let patSubOptions = patOptions[patSEL.value];
   let sizeArr = [];
   for ( let psOpt of patSubOptions) {
-    console.log(psOpt.size);
+    // console.log(psOpt.size);
     if (psOpt.size != null) {
       sizeArr.push(psOpt.size);
     }
@@ -76,11 +91,12 @@ function set_up_options() {
   catSEL.addEventListener("click", e => {
     pp_pattern_sel_cat = e.target.value;
   })  
-  patSEL.addEventListener("click", e => {
+  patSEL.addEventListener("change", e => {
     pp_pattern_sel_name = e.target.value;
   })  
-  sizeSEL.addEventListener("click", e => {
+  sizeSEL.addEventListener("change", e => {
     pp_pattern_sel_size = e.target.value;
+
   }) 
   awardSEL.addEventListener("click", e => {
     pp_award_sel_theme = e.target.value;
@@ -163,6 +179,7 @@ function set_up_options() {
 };
 
 // Menu Bar ___________________________________________________________
+
   
 function set_up_menu_bar() {
   const menuDIV = document.getElementById("menu_options");
@@ -187,18 +204,34 @@ function set_up_menu_bar() {
         prev_e.target.className = "menu";
       }
       prev_e = e;
+      // window.setInterval(update_status_bar_time(), 1000);
+
       switch (e.target.id) {
         case "mb_options":
-          document.getElementById('game_field').style.display = "none";
           document.getElementById('game_options').style.display = "";
-
+          document.getElementById('game_status').style.display = "none";
+          document.getElementById('game_field').style.display = "none";
+          document.getElementById('game_about').style.display = "none";
+          // window.clearInterval(); // Not needed! ;-)
           break;
       
         case "mb_start":
-          document.getElementById('game_field').style.display = "";
           document.getElementById('game_options').style.display = "none";
+          document.getElementById('game_status').style.display = "";
+          document.getElementById('game_field').style.display = "";
+          document.getElementById('game_about').style.display = "none";
           game_play();
           break;
+
+        case "mb_about":
+          document.getElementById('game_options').style.display = "none";
+          document.getElementById('game_status').style.display = "none";
+          document.getElementById('game_field').style.display = "none";
+          document.getElementById('game_about').style.display = "";
+          // window.clearInterval(); // Not needed! ;-)
+
+          break;
+
         default:
           break;
       }
@@ -206,5 +239,6 @@ function set_up_menu_bar() {
   })
 
   menuDIV.appendChild(menuBarDIV);
+
 }
 export {set_up_options, set_up_menu_bar, pp_pattern_sel_name, pp_pattern_sel_size, pp_pattern_sel_cat, pp_award_sel_theme}; 
