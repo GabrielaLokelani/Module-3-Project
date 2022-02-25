@@ -1,3 +1,5 @@
+import {pp_award_sel_theme} from "./pop_pal_options.js"
+
 let first_click = false;
 let first_click_tstamp = 0;
 let last_click = false;
