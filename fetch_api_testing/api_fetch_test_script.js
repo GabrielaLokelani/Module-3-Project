@@ -5,52 +5,52 @@ awardsDIV.innerHTML = "";
 
 // Cat API
 
-// fetch("https://api.thecatapi.com/v1/images/search?q=appid=ad5e525a-6994-4f91-a7fd-dcb8c84ef9c8") 
-//     .then((res) => {
-//         console.log(res)
-//         return res.json()
-//     })
-//     .then((data) => {
-        
-//         console.log(data)
-//         const api_cats = data;
-//         console.log(api_cats);
-
-//         api_cats.forEach(cat => {
-//             console.log(cat.url);
-//             let tempCatHTML = `<div class="text-center"> 
-//             <img style="height:100vh; max-width:95%; object-fit: contain;" src="${cat.url}">
-//             </div>`;
-
-//             awardsDIV.innerHTML += tempCatHTML;
-//             pp_award_sel_theme = api_cats;
-//         })
-//     });
-// ________________________________________________
-// Space API
-
-fetch("https://api.nasa.gov/planetary/apod?api_key=5akgAwJqTYMb0w4loSNz2Swxda8NERKSonOvOWQx")
+fetch("https://api.thecatapi.com/v1/images/search?q=appid=ad5e525a-6994-4f91-a7fd-dcb8c84ef9c8") 
     .then((res) => {
         console.log(res)
         return res.json()
     })
     .then((data) => {
         
-        // console.log(data)
-        const api_space = data;
-        // console.log(api_space);
+        console.log(data)
+        const api_cats = data;
+        console.log(api_cats);
 
-        // api_space.forEach(space_image => {
-            console.log(api_space.hdurl);
-            let tempSpaceHTML = `<div class="text-center"> 
-            <img style="height:100vh; max-width:95%; object-fit: contain;" src="${api_space.hdurl}">
+        api_cats.forEach(cat => {
+            console.log(cat.url);
+            let tempCatHTML = `<div class="text-center"> 
+            <img style="height:100vh; max-width:95%; object-fit: contain;" src="${cat.url}">
             </div>`;
 
-            awardsDIV.innerHTML += tempSpaceHTML;
-            pp_award_sel_theme = api_space;
-        // })
+            awardsDIV.innerHTML += tempCatHTML;
+            pp_award_sel_theme = api_cats;
+        })
     });
-// ____________________________________________
+________________________________________________
+// Space API
+
+// fetch("https://api.nasa.gov/planetary/apod?api_key=5akgAwJqTYMb0w4loSNz2Swxda8NERKSonOvOWQx")
+//     .then((res) => {
+//         console.log(res)
+//         return res.json()
+//     })
+//     .then((data) => {
+        
+//         // console.log(data)
+//         const api_space = data;
+//         // console.log(api_space);
+
+//         // api_space.forEach(space_image => {
+//             console.log(api_space.hdurl);
+//             let tempSpaceHTML = `<div class="text-center"> 
+//             <img style="height:100vh; max-width:95%; object-fit: contain;" src="${api_space.hdurl}">
+//             </div>`;
+
+//             awardsDIV.innerHTML += tempSpaceHTML;
+//             pp_award_sel_theme = api_space;
+//         // })
+//     });
+// // ____________________________________________
 // Motivation API
 
 // fetch("https://type.fit/api/quotes")
