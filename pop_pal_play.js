@@ -1,4 +1,4 @@
-import {pp_award_sel_theme} from "./pop_pal_options.js"
+import {game_sound, game_vibrate} from "./pop_pal_options.js"
 
 let first_click = false;
 let first_click_tstamp = 0;
@@ -17,8 +17,6 @@ function setGrid(numColums, numRows, pat, pat_colors) {
 
     const rootDIV = document.getElementById('game_field');
 
-    // const myDIV = document.createElement('div');
-
     let gridHTML = '<div class="game">';
 
     gridHTML += '<table class = "pop-it" >'
@@ -27,6 +25,9 @@ function setGrid(numColums, numRows, pat, pat_colors) {
     num2pop = 0;
     first_click = false;
     last_click = false;
+    document.getElementById('mb_sound').style.display = "";
+    document.getElementById('mb_vibrate').style.display = "";
+
 
 
     for (let col = 0; col < numColums; col++) {
@@ -43,19 +44,13 @@ function setGrid(numColums, numRows, pat, pat_colors) {
         }
         gridHTML += '</tr>';
     } 
-
     gridHTML += '</table>';
-
     gridHTML += '</div>';
-    // myDIV.innerHTML = gridHTML;
 
     rootDIV.innerHTML = gridHTML;
 
-    
-    
     rootDIV.addEventListener("click", (e) => {
         if (e.target.className == "button") {
-            // insert sound effect here but before line 60 
             e.target.className = "button_active";
             if(!first_click){
                 first_click_tstamp = Date.now();
@@ -66,23 +61,33 @@ function setGrid(numColums, numRows, pat, pat_colors) {
             update_status_bar();
             update_status_bar_time();
 
-            console.log("Pop #"+curr_pop_cnt + " of "+num2pop);
             last_click = curr_pop_cnt == num2pop ? true : false;
             if(last_click){
                 last_click_tstamp = Date.now();
                 let time2complete_in_secs = (last_click_tstamp - first_click_tstamp) / 1000;
-                console.log("CONGRATULATIONS!!! You POPPED all the spots for this pattern!")
-                console.log("\n*** TIME TO COMPLETE: "+time2complete_in_secs+" seconds ***")
+                let final_time = document.getElementById("curr_time_value")
+                final_time.textContent = time2complete_in_secs.toFixed(2);
+        
                 first_click = false;
                 last_click = false;
                 curr_pop_cnt = 0;
+                // Present the AWARD!!!!
+                document.getElementById('game_options').style.display = "none";
+                document.getElementById('game_status').style.display = "";
+                document.getElementById('game_field').style.display = "none";
+                document.getElementById('game_award').style.display = "";
+                document.getElementById('game_about').style.display = "none";
+                document.getElementById('mb_sound').style.display = "none";
+                document.getElementById('mb_vibrate').style.display = "none";
+                console.log("First: "+first_click_tstamp)
+                console.log(" Last: "+last_click_tstamp)
+      
             }
-            
-            audio.play();
-            
-            
+            if(game_sound) audio.play();
+            if(game_vibrate) navigator.vibrate(100);
         }
     });
+
     update_status_bar();
 }
 
@@ -99,6 +104,10 @@ function setup_game_status() {
     <a id="num_to_pop_val" class="status_value">***</a>
     <a id="curr_time" class="status_label">Time (in seconds): </a>
     <a id="curr_time_value" class="status_value">0.00</a>
+    <a id="sound_stat" class="status_label">Sound is: </a>
+    <a id="sound_stat_value" class="status_value">ON</a>
+    <a id="vibrate_stat" class="status_label">Vibrate is: </a>
+    <a id="vibrate_stat_value" class="status_value">ON</a>
   </div>
     `
 
@@ -113,14 +122,20 @@ function update_status_bar() {
     stat_cur_pop.textContent = curr_pop_cnt;
     let stat_num_to_pop = document.getElementById("num_to_pop_val")
     stat_num_to_pop.textContent = num2pop;
+    let stat_sound = document.getElementById("sound_stat_value")
+    stat_sound.textContent = game_sound ? "ON" : "OFF";
+    let stat_vibrate = document.getElementById("vibrate_stat_value")
+    stat_vibrate.textContent = game_vibrate ? "ON" : "OFF";
+
+
 }
 
 function update_status_bar_time() {
+    let curr_tstamp = Date.now();
     if(first_click && !last_click){
         let stat_time = document.getElementById("curr_time_value")
         stat_time.textContent = ((Date.now() - first_click_tstamp)/1000).toFixed(2);
     }
-    // console.log("Interval Time = "+Date.now())
 }
 
-export {setGrid, setup_game_status, update_status_bar_time, first_click, curr_pop_cnt, num2pop, first_click_tstamp};
+export {setGrid, setup_game_status, update_status_bar, update_status_bar_time, first_click, curr_pop_cnt, num2pop, first_click_tstamp, last_click_tstamp};
