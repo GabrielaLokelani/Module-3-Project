@@ -16,7 +16,7 @@
 .pop-it {
     /* padding-top: 50px;  */
     border-radius: 10px;
-    border: solid black 0.5px 10px;
+    border: solid black 0.5px;
     /* height: 100px;
     width: 100px; */
     margin: auto;
@@ -99,7 +99,7 @@ th, td {
   font-size: 20px;
   text-align: center;
   border-radius: 5px;
-  border: solid black 0.5px 10px;
+  border: solid black 0.5px;
 }
 
 #select_your_pattern {
@@ -109,7 +109,7 @@ th, td {
   font-size: 20px;
   text-align: center;
   border-radius: 5px;
-  border: solid black 0.5px 10px;
+  border: solid black 0.5px;
 }
 
 #select_your_pp_size {
@@ -119,7 +119,7 @@ th, td {
   font-size: 20px;
   text-align: center;
   border-radius: 5px;
-  border: solid black 0.5px 10px;
+  border: solid black 0.5px;
 }
 
 #select_your_award_theme {
@@ -129,7 +129,7 @@ th, td {
   font-size: 20px;
   text-align: center;
   border-radius: 5px;
-  border: solid black 0.5px 10px;
+  border: solid black 0.5px;
 }
 
 p {
@@ -143,7 +143,6 @@ p {
   text-shadow: 0px 1px 1px #282828;
 }
 
-
 /* this is for the tile */
 
 #game_title {
@@ -154,7 +153,6 @@ p {
   animation: colorchange 5s infinite normal;
 	-webkit-text-stroke: .65px #282828;
 	text-shadow: 0px 4px 4px #282828;
-
 }
 
 @keyframes colorchange{	
@@ -173,7 +171,7 @@ p {
 	100%{
 	color: lightblue;
 	}
-	}
+}
 
 /* the games about page */
 
@@ -187,19 +185,19 @@ p {
 }
 
 .about h1 {
-  font-family: 'Acme';
+  /* font-family: 'Acme'; */
   color:  #ffee00d2;
   text-shadow: 0px 2px 2px #282828;
 }
 
 .about h2 {
-  font-family: 'Acme';
+  /* font-family: 'Acme'; */
   color: #ffee00d2;;
   text-shadow: 0px 2px 2px #282828;
 }
 
 .about h3 {
-  font-family: 'Acme';
+  /* font-family: 'Acme'; */
   color:  #ffee00d2;
   text-shadow: 0px 2px 2px #282828;
 }
@@ -285,8 +283,3 @@ a#curr_time_value.status_value {
   font-family: 'Gorditas';
   font-weight: 400;
 }
-
-
-
-
-
